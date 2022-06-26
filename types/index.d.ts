@@ -22,10 +22,11 @@ export interface OTSessionProps {
   eventHandlers?: SessionEventHandlers;
   onConnect?: () => void;
   onError?: (error: Error) => void;
+  children?: React.ReactNode;
 }
 
 export interface OTStreamsProps {
-  children: React.ReactElement;
+  children: React.ReactNode;
   session?: Session;
   streams?: Stream[];
 }
@@ -42,6 +43,9 @@ export interface OTSubscriberProps {
   stream?: Stream;
   onSubscribe?: () => void;
   onError?: (error: Error) => void;
+  retry?: boolean;
+  maxRetryAttempts?: number;
+  retryAttemptTimeout?: number;
 }
 
 export const OTPublisher: React.ComponentType<OTPublisherProps>;
