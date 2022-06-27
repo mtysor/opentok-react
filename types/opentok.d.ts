@@ -8,6 +8,7 @@ export type ConnectionDisconnectReason = 'clientDisconnected' | 'forceDisconnect
 export interface Error {
   code?: number;
   name: string;
+  message: string;
   preventDefault(): void;
   isDefaultPrevented(): boolean;
 }
