@@ -1,5 +1,6 @@
 import React from 'react';
 import { Session, Error, PublisherProperties, Stream, SubscriberProperties, PublisherEventHandlers, SessionEventHandlers, SubscriberEventHandlers, Subscriber, Publisher } from './opentok';
+export * from './opentok';
 
 export interface OTPublisherRef {
   getPublisher(): Publisher;
